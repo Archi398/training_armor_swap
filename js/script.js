@@ -17,7 +17,7 @@ elkeyE.onclick = function() {
 };
 
 $("body").on('keydown', function(event) {
-    // console.log(event.code);
+    console.log(event.code);
     if (event.code === "KeyE" && !fired && start) {
         pressed = setTimeout(function() {
             $('#loot_box_div').show();
@@ -39,7 +39,7 @@ $("body").on('keydown', function(event) {
         $('#result').hide();
         start = false;
     }
-    if (event.code === "Escape" && swapSuccess) {
+    if ((event.code === "Escape" || event.code === "Tab") && swapSuccess) {
         var delta = ((Date.now() - timer) / 1000);
         document.getElementById("timer").innerHTML = delta;
         $('#result').show();
