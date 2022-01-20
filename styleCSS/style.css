@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "TTSquares";
+    src: url("TTSquaresCondensed-Regular.ttf") format("truetype");
+}
+
 /*---- GLOBALE ----*/
 
 * {
@@ -8,6 +13,7 @@
     list-style: none;
     box-sizing: border-box;
     outline: 0;
+    font-family: "TTSquares";
 }
 
 body{
@@ -33,17 +39,65 @@ body{
 
 svg {
     transform: rotate(-90deg);
-    stroke-dasharray: 125; /* (2PI * 40px) */
+    stroke-dasharray: 125; /* (2PI * 20px) */
     stroke-dashoffset: 125;
+}
+
+#keyE{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+    margin: auto;
+    z-index: 2;
+    width: 40px;
+}
+
+#lootBox {
+    position: absolute;
+    top: 11%;
+    left: 4%;
+    width: 31%;
+    height: 76%;
     z-index: 1;
 }
 
-.keyE{
-    background-image: url("../img/keyE.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 20%;
+#armorInvald {
+    position: absolute;
+    top: 66%;
+    left: 6.1%;
+    width: 26.77%;
+    height: 5.5%;
     z-index: 2;
+}
+
+#armorValid {
+    position: absolute;
+    top: 66%;
+    left: 6.1%;
+    width: 26.77%;
+    height: 5.5%;
+    z-index: 3;
+}
+
+#result{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+    margin: auto;
+    z-index: 20;
+    width: 300px;
+    height: 100px;
+    background-color: darkgreen;
+    border: 4px solid grey;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -53,6 +107,12 @@ svg {
 @keyframes offsettozero {
     to {
         stroke-dashoffset: 0;
+    }
+}
+
+@keyframes offsetto125 {
+    to {
+        stroke-dashoffset: 125;
     }
 }
 

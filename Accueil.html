@@ -21,20 +21,31 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="styleCSS/style.css" />
     <!-- favicon -->
+    <link rel="icon" type="image/png" href="./img/amorIcon.png" />
 
 </head>
 
 <body>
 
-    <div id="maintain_press" >
-        <div class="keyE ">
-            <svg height="150" width="150" id="progressCircle">
-                <circle cx="75" cy="75" r="20" stroke="#428bca" stroke-width="100" style="fill-opacity: 0;" />
-            </svg>
-        </div>
+    <div id="loot_box_div" style="display: none;">
+        <img id="lootBox" src="./img/lootBox.jpg" draggable="false" />
+        <img id="armorInvald" src="./img/armorInvalid.jpg" draggable="false" />
+        <img id="armorValid" src="./img/armorValid.png" draggable="false" style="display: none;" />
     </div>
 
-    
+    <div id="maintain_press">
+        <img id="keyE" src="./img/keyE.png" />
+        <svg height="150" width="150" id="progressCircle">
+            <circle cx="75" cy="75" r="20" stroke="#ffffff" stroke-width="100" style="fill-opacity: 0;" />
+        </svg>
+    </div>
+
+    <div id="result" style="display: none;">
+        <h1>BRAVO</h1>
+        <p>Voici ton score : <span id="timer" style="text-decoration: underline; font-weight: bold;">0.256</span> sec</p>
+    </div>
+
+
 
     <!-- RAISON DU POURQUOI LE JS A LA FIN : If you have code in your JavaScript that alters HTML as soon as the JavaScript file loads, there won't actually be any HTML elements available for it to affect yet -->
     <!-- JQUERY -->
