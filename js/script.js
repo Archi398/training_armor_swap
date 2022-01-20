@@ -18,7 +18,7 @@ elkeyE.onclick = function() {
 
 $("body").on('keydown', function(event) {
     console.log(event.code);
-    if (event.code === "KeyE" && !fired && start) {
+    if ((event.code === "KeyE" || event.code === "KeyF") && !fired && start) {
         pressed = setTimeout(function() {
             $('#loot_box_div').show();
             timer = Date.now();
@@ -47,7 +47,7 @@ $("body").on('keydown', function(event) {
 });
 
 $("body").on('keyup', function(event) {
-    if (event.code === "KeyE" && fired && !endPress) {
+    if ((event.code === "KeyE" || event.code === "KeyF") && fired && !endPress) {
         clearTimeout(pressed);
         document.getElementById('progressCircle').style.animation="";
         fired = false;
