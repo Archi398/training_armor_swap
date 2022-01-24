@@ -56,7 +56,7 @@ $("body").on('keyup', function(event) {
     }
 });
 
-$("#armorInvald").on('click', function(event) {
+$("#armorInvald").on('mousedown', function(event) {
     $('#armorValid').show();
     swapSuccess = true;
     event.preventDefault();
